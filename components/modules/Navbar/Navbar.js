@@ -1,30 +1,32 @@
 import React from 'react';
-
+import Link from 'next/link';
 function Navbar() {
   return (
     <div>
       <nav>
-        <a href="index.html">
-          <h1>Next-Coffee</h1>
-        </a>
-        <button type="button">
-          <span></span>
-        </button>
-        <div>
-          <div>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="service.html">Service</a>
-            <a href="menu.html">Menu</a>
-            <div className="dropdown">
-              <a href="#">Pages</a>
-              <div className="dropdown_menu">
-                <a href="reservation.html">Reservation</a>
-                <a href="testimonial.html">Testimonial</a>
-              </div>
-            </div>
-            <a href="contact.html">Contact</a>
-          </div>
+        <div className="logo">
+          <Link href="/">Caffora</Link>
+        </div>
+        <div className="but"></div>
+        <div className="bars">
+          <ul>
+            {
+              (links = [
+                { name: 'Home', path: '/' },
+                { name: 'About', path: '/about' },
+                { name: 'Service', path: '/services' },
+                { name: 'Menu', path: '/menu' },
+                {
+                  name: 'Pages',
+                  dropdown: [
+                    { name: 'Reservation', path: '/reservation' },
+                    { name: 'Testimonial', path: '/testimonial' },
+                  ],
+                },
+                { name: 'Contact', path: '/contact' },
+              ])
+            }
+          </ul>
         </div>
       </nav>
     </div>
