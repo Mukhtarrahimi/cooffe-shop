@@ -1,5 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
+// Font Awesome
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
+
 function Navbar() {
   return (
     <div>
@@ -7,7 +11,9 @@ function Navbar() {
         <div className="logo">
           <Link href="/">Caffora</Link>
         </div>
-        <div className="but"></div>
+        <div className="btn">
+          <FontAwesomeIcon icon={faBars} />
+        </div>
         <div className="bars">
           <ul>
             {
