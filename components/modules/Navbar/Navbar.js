@@ -30,7 +30,6 @@ function Navbar() {
     { name: 'Contact', path: '/contact' },
   ];
 
-  // بستن dropdown هنگام کلیک خارج از آن
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
