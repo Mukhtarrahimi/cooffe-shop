@@ -1,7 +1,8 @@
+import Slider from '@/components/templates/Index/Slider';
 import React from 'react';
 
 function index() {
-  return <div>index</div>;
+  return <Slider />;
 }
 
 export default index;
