@@ -1,5 +1,8 @@
 import React from 'react';
 
+import '@fortawesome/fontawesome-svg-core/styles.css';
+import { config } from '@fortawesome/fontawesome-svg-core';
+config.autoAddCss = false;
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import { faTruck, faTable } from "@fortawesome/free-solid-svg-icons";
 import * as Icons from '@fortawesome/free-solid-svg-icons';

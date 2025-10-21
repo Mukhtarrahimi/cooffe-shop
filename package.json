@@ -6,7 +6,8 @@
     "dev": "next dev --webpack",
     "build": "next build --webpack",
     "start": "next start",
-    "server": "json-server --watch ./data/db.json -p 4000"
+    "server": "json-server --watch ./data/db.json -p 4000",
+    "lint": "next lint"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^7.1.0",
