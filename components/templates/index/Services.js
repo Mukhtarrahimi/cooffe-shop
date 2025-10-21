@@ -21,7 +21,7 @@ function Services() {
             et lorem dolor sed est sit invidunt, dolore tempor diam ipsum
             takima erat tempor"
             img="/images/service-1.jpg"
-            icon=""
+            icon="faTruck"
           />
           <ServiceItem
             title="Fresh Coffee Beans"
@@ -29,7 +29,7 @@ function Services() {
             et lorem dolor sed est sit invidunt, dolore tempor diam ipsum
             takima erat tempor"
             img="/images/service-2.jpg"
-            icon=""
+            icon="faCoffee"
           />
           <ServiceItem
             title="Online Table Booking"
@@ -37,7 +37,7 @@ function Services() {
             et lorem dolor sed est sit invidunt, dolore tempor diam ipsum
             takima erat tempor"
             img="/images/service-3.jpg"
-            icon=""
+            icon="faAward"
           />
           <ServiceItem
             title="Best Quality Coffee"
@@ -45,7 +45,7 @@ function Services() {
             et lorem dolor sed est sit invidunt, dolore tempor diam ipsum
             takima erat tempor"
             img="/images/service-4.jpg"
-            icon=""
+            icon="faTable"
           />
         </div>
       </div>
