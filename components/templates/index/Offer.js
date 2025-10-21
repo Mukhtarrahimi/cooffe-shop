@@ -11,7 +11,11 @@ function Offer() {
       },
       body: JSON.stringify({email}),
 
-    })
+    });
+    if(response.status ===201){
+      setEmail('');
+      alert('join Successfully')
+    }
   return (
     <div class="offer container-fluid my-5 py-5 text-center position-relative overlay-top overlay-bottom">
       <div class="container py-5">
