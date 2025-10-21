@@ -1,4 +1,7 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faTruck, faTable } from "@fortawesome/free-solid-svg-icons";
+import * as Icons from '@fortawesome/free-solid-svg-icons';
 
 function ServiceItem({ title, desc, img, icon }) {
   return (
