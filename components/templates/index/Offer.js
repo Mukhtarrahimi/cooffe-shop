@@ -1,6 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 function Offer() {
+  const [email, setEmail] = useState('');
+  const addEmail = async (event) => {};
+    event.preventDefault();
+    const response = await fetch('http://locathost:4000/newsLetters',{
+      method : 'POST',
+      header: {
+        "content-type": "applicatio/json",
+      },
+      body: JSON.stringify({email}),
+
+    })
   return (
     <div class="offer container-fluid my-5 py-5 text-center position-relative overlay-top overlay-bottom">
       <div class="container py-5">
