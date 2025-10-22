@@ -3,6 +3,7 @@ import React from 'react';
 import About from '@/components/templates/Index/About';
 import Services from '@/components/templates/Index/Services';
 import Offer from '@/components/templates/Index/Offer';
+import Menu from '@/components/templates/Index/Menu';
 
 function Index({ data }) {
   return (
@@ -11,6 +12,7 @@ function Index({ data }) {
       <About />
       <Services services={data.services} />
       <Offer />
+      <Menu />
     </>
   );
 }
