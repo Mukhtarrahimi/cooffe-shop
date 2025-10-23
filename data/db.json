@@ -76,5 +76,14 @@
       "productID": 2,
       "score": 4.5
     }
+  ],
+  "reserve": [
+    {
+      "id": 1,
+      "name": "ali",
+      "email": "ali@gmail.com",
+      "time": 12,
+      "person": 4
+    }
   ]
 }
