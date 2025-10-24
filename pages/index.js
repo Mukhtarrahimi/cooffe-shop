@@ -5,6 +5,7 @@ import Services from '@/components/templates/Index/Services';
 import Offer from '@/components/templates/Index/Offer';
 import Menu from '@/components/templates/Index/Menu';
 import Reservation from '@/components/templates/Index/reservation';
+import Testimonials from '@/components/templates/Index/Testtimonials';
 
 function Index({ data }) {
   return (
@@ -15,6 +16,7 @@ function Index({ data }) {
       <Offer />
       <Menu data={data.menu} />
       <Reservation />
+      <Testimonials comment={data.comment} />
     </>
   );
 }
@@ -26,8 +28,8 @@ export async function getStaticProps() {
   const menuResponse = await fetch('http://localhost:4000/menu');
   const menuData = await menuResponse.json();
 
-  const commentRespoinse = await fetch('http://localhost:4000/comments');
-  const commentData = await commentRespoinse.json();
+  const commentResponse = await fetch('http://localhost:4000/comments');
+  const commentData = await commentResponse.json();
 
   return {
     props: {

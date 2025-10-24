@@ -15,7 +15,7 @@ function Testimonials({ data }) {
           <h1 class="display-4">Our Clients Say</h1>
         </div>
         <div class="owl-carousel testimonial-carousel">
-          {data.slice(0, 4).map((comment) => (
+          {data?.slice(0, 4).map((comment) => (
             <Testimonial {...comment} key={comment.id} />
           ))}
         </div>
