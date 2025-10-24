@@ -34,78 +34,78 @@ function Reservation() {
   };
 
   return (
-    <div classNameName="container-fluid my-5">
-      <div classNameName="container">
-        <div classNameName="reservation position-relative overlay-top overlay-bottom">
-          <div classNameName="row align-items-center">
-            <div classNameName="col-lg-6 my-5 my-lg-0">
-              <div classNameName="p-5">
-                <div classNameName="mb-4">
-                  <h1 classNameName="display-3 text-primary">30% OFF</h1>
-                  <h1 classNameName="text-white">For Online Reservation</h1>
+    <div className="container-fluid my-5">
+      <div className="container">
+        <div className="reservation position-relative overlay-top overlay-bottom">
+          <div className="row align-items-center">
+            <div className="col-lg-6 my-5 my-lg-0">
+              <div className="p-5">
+                <div className="mb-4">
+                  <h1 className="display-3 text-primary">30% OFF</h1>
+                  <h1 className="text-white">For Online Reservation</h1>
                 </div>
-                <p classNameName="text-white">
+                <p className="text-white">
                   Lorem justo clita erat lorem labore ea, justo dolor lorem
                   ipsum ut sed eos, ipsum et dolor kasd sit ea justo. Erat justo
                   sed sed diam. Ea et erat ut sed diam sea
                 </p>
-                <ul classNameName="list-inline text-white m-0">
-                  <li classNameName="py-2">
-                    <i classNameName="fa fa-check text-primary mr-3"></i>Lorem
-                    ipsum dolor sit amet
+                <ul className="list-inline text-white m-0">
+                  <li className="py-2">
+                    <i className="fa fa-check text-primary mr-3"></i>Lorem ipsum
+                    dolor sit amet
                   </li>
-                  <li classNameName="py-2">
-                    <i classNameName="fa fa-check text-primary mr-3"></i>Lorem
-                    ipsum dolor sit amet
+                  <li className="py-2">
+                    <i className="fa fa-check text-primary mr-3"></i>Lorem ipsum
+                    dolor sit amet
                   </li>
-                  <li classNameName="py-2">
-                    <i classNameName="fa fa-check text-primary mr-3"></i>Lorem
-                    ipsum dolor sit amet
+                  <li className="py-2">
+                    <i className="fa fa-check text-primary mr-3"></i>Lorem ipsum
+                    dolor sit amet
                   </li>
                 </ul>
               </div>
             </div>
 
-            <div classNameName="col-lg-6">
+            <div className="col-lg-6">
               <div
-                classNameName="text-center p-5"
+                className="text-center p-5"
                 style={{ background: 'rgba(51, 33, 29, .8)' }}
               >
-                <h1 classNameName="text-white mb-4 mt-5">Book Your Table</h1>
-                <form classNameName="mb-5" onSubmit={infoHandler}>
-                  <div classNameName="form-group">
+                <h1 className="text-white mb-4 mt-5">Book Your Table</h1>
+                <form className="mb-5" onSubmit={infoHandler}>
+                  <div className="form-group">
                     <input
                       type="text"
-                      classNameName="form-control bg-transparent border-primary p-4"
+                      className="form-control bg-transparent border-primary p-4"
                       placeholder="Name"
                       required
                       value={name}
                       onChange={(e) => setName(e.target.value)}
                     />
                   </div>
-                  <div classNameName="form-group">
+                  <div className="form-group">
                     <input
                       type="email"
-                      classNameName="form-control bg-transparent border-primary p-4"
+                      className="form-control bg-transparent border-primary p-4"
                       placeholder="Email"
                       required
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                     />
                   </div>
-                  <div classNameName="form-group">
+                  <div className="form-group">
                     <input
                       type="text"
-                      classNameName="form-control bg-transparent border-primary p-4"
+                      className="form-control bg-transparent border-primary p-4"
                       placeholder="Time"
                       required
                       value={time}
                       onChange={(e) => setTime(e.target.value)}
                     />
                   </div>
-                  <div classNameName="form-group">
+                  <div className="form-group">
                     <select
-                      classNameName="custom-select bg-transparent border-primary px-4"
+                      className="custom-select bg-transparent border-primary px-4"
                       style={{ height: '49px' }}
                       required
                       value={person}
@@ -121,7 +121,7 @@ function Reservation() {
 
                   <div>
                     <button
-                      classNameName="btn btn-primary btn-block font-weight-bold py-3"
+                      className="btn btn-primary btn-block font-weight-bold py-3"
                       type="submit"
                     >
                       Book Now
