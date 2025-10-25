@@ -1,3 +1,4 @@
+import Footer from '@/components/modules/Footer/Footer';
 import Navbar from '@/components/modules/Navbar/Navbar';
 import '@/styles/globals.css';
 // font-awesome config
@@ -10,6 +11,7 @@ export default function App({ Component, pageProps }) {
     <>
       <Navbar />
       <Component {...pageProps} />
+      <Footer />
     </>
   );
 }
