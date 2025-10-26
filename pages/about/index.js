@@ -5,7 +5,7 @@ import React from 'react';
 function About() {
   return (
     <>
-      <PageHeader />
+      <PageHeader route="About" />
       <Story />
     </>
   );
