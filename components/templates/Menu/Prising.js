@@ -1,26 +1,44 @@
-import PageHeader from '@/components/modules/PageHeader/PageHeader';
-import Pricing from '@/components/templates/Menu/Pricing';
+import Card from '@/components/modules/Card/Card';
 import React from 'react';
 
-function Menu({ menu }) {
+function Pricing({ data }) {
   return (
-    <>
-      <PageHeader route="Menu" />
-      <Pricing data={menu} />
-    </>
+    <div class="container-fluid pt-5">
+      <div class="container">
+        <div class="section-title">
+          <h4
+            class="text-primary text-uppercase"
+            style={{ letterSpacing: '5px' }}
+          >
+            Menu &amp; Pricing
+          </h4>
+          <h1 class="display-4">Competitive Pricing</h1>
+        </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <h1 class="mb-5">Hot Coffee</h1>
+
+            {data
+              .filter((item) => item.type === 'hot')
+              .slice(0, 3)
+              .map((item) => (
+                <Card {...item} key={item.id} />
+              ))}
+          </div>
+          <div class="col-lg-6">
+            <h1 class="mb-5">Cold Coffee</h1>
+
+            {data
+              .filter((item) => item.type === 'cold')
+              .slice(0, 3)
+              .map((item) => (
+                <Card {...item} key={item.id} />
+              ))}
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }
 
-export async function getStaticProps(context) {
-  const res = await fetch('http://localhost:4000/menu');
-  const data = await res.json();
-
-  return {
-    props: {
-      menu: data,
-    },
-    revalidate: 60 * 60 * 12, // 43200 Second
-  };
-}
-
-export default Menu;
+export default Pricing;
