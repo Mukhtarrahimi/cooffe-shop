@@ -5,33 +5,33 @@ function Menu({ data }) {
   console.log('Menu =>', data);
 
   return (
-    <div className="container-fluid pt-5">
-      <div className="container">
-        <div className="section-title">
+    <div class="container-fluid pt-5">
+      <div class="container">
+        <div class="section-title">
           <h4
-            className="text-primary text-uppercase"
+            class="text-primary text-uppercase"
             style={{ letterSpacing: '5px' }}
           >
             Menu &amp; Pricing
           </h4>
-          <h1 className="display-4">Competitive Pricing</h1>
+          <h1 class="display-4">Competitive Pricing</h1>
         </div>
-        <div className="row">
-          <div className="col-lg-6">
-            <h1 className="mb-5">Hot Coffee</h1>
+        <div class="row">
+          <div class="col-lg-6">
+            <h1 class="mb-5">Hot Coffee</h1>
 
             {data
-              ?.filter((item) => item.type === 'hot')
+              .filter((item) => item.type === 'hot')
               .slice(0, 3)
               .map((item) => (
                 <Card {...item} />
               ))}
           </div>
 
-          <div className="col-lg-6">
-            <h1 className="mb-5">Cold Coffee</h1>
+          <div class="col-lg-6">
+            <h1 class="mb-5">Cold Coffee</h1>
             {data
-              ?.filter((item) => item.type === 'cold')
+              .filter((item) => item.type === 'cold')
               .slice(0, 3)
               .map((item) => (
                 <Card {...item} />
