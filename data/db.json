@@ -38,7 +38,7 @@
       "score": 5,
       "off": 0,
       "type": "hot",
-      "img": "/images/menu-3.jpg"
+      "img": "/images/menu-4.jpeg"
     },
     {
       "id": 5,
@@ -48,7 +48,7 @@
       "score": 4.8,
       "off": 0,
       "type": "hot",
-      "img": "/images/menu-2.jpg"
+      "img": "/images/menu-5.jpeg"
     },
     {
       "id": 6,
@@ -58,7 +58,7 @@
       "score": 4.9,
       "off": 0,
       "type": "cold",
-      "img": "/images/menu-1.jpg"
+      "img": "/images/menu-6.jpeg"
     }
   ],
   "services": [
@@ -140,20 +140,23 @@
   ],
   "messages": [
     {
-      "id": 1,
-      "username": "amin",
+      "username": "Amin Saeedi",
       "email": "amin@gmail.com",
-      "subject": "React Native Course",
-      "body": "Please teach react native course"
+      "subject": "React Native",
+      "body": "Hi, Please teach react native course 🙏❤️",
+      "id": 1
+    },
+    {
+      "username": "Qadir Yolme",
+      "email": "qYolme@gmail.com",
+      "subject": "Test",
+      "body": "Hi. This is a test message ❤️",
+      "id": 2
     }
   ],
   "reserve": [
     {
-      "id": 1,
-      "name": "ali",
-      "email": "ali@gmail.com",
-      "time": 12,
-      "person": 4
+      "id": 1
     }
   ]
 }
