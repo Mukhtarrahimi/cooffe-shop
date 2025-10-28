@@ -25,16 +25,15 @@ function Footer() {
             Get In Touch
           </h4>
           <p>
-            <FontAwesomeIcon icon={faMapMarkerAlt} className="mr-2" /> 123
-            Street, New York, USA
+            <FontAwesomeIcon icon={faMapMarkerAlt} className="mr-2" /> 13
+            Street, Kabul, Afghanistan
           </p>
           <p>
-            <FontAwesomeIcon icon={faPhoneAlt} className="mr-2" /> +012 345
-            67890
+            <FontAwesomeIcon icon={faPhoneAlt} className="mr-2" /> +98 915 7022
           </p>
           <p className="m-0">
             <FontAwesomeIcon icon={faEnvelope} className="mr-2" />{' '}
-            info@example.com
+            mukhtarrahimi.dev@gmail.com
           </p>
         </div>
 
