@@ -123,7 +123,7 @@ function Footer() {
         <p className="mb-2 text-white">
           Copyright ©{' '}
           <a className="font-weight-bold text-white" href="#">
-            Domain
+            Rahimi
           </a>
           . All Rights Reserved.
         </p>
