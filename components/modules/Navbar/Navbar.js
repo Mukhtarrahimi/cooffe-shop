@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styles from '@/styles/Navbar.module.css';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 // Fontawesome
 import '@fortawesome/fontawesome-svg-core/styles.css';
@@ -8,29 +9,28 @@ import { config } from '@fortawesome/fontawesome-svg-core';
 config.autoAddCss = false;
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
-import { useRouter } from 'next/router';
 
 function Navbar() {
-  const route = useRouter();
+  const router = useRouter();
   const [search, setSearch] = useState('');
 
   useEffect(() => {
-    setSearch(route.query.q);
-  }, []);
+    setSearch(router.query.q || '');
+  }, [router.query.q]);
 
   const searchHandlerWithEnter = (event) => {
-    if (event.keyCode === 13) {
-      if (search.trim()) {
-        route.push(`/search?q=${search}`);
-      }
+    if (event.keyCode === 13 && search.trim()) {
+      router.push(`/search?q=${search}`);
     }
   };
 
   const searchHandler = () => {
     if (search.trim()) {
-      route.push(`/search?q=${search}`);
+      router.push(`/search?q=${search}`);
     }
   };
+
+  const isActive = (path) => router.pathname === path;
 
   return (
     <div className={`container-fluid p-0 ${styles.nav_bar}`}>
@@ -58,14 +58,7 @@ function Navbar() {
             icon={faSearch}
           />
         </div>
-        <button
-          type="button"
-          className={`${styles.navbar_toggler}`}
-          data-toggle="collapse"
-          data-target="#navbarCollapse"
-        >
-          <span className={`${styles.navbar_toggler_icon}`}></span>
-        </button>
+
         <div
           className={`collapse ${styles.navbar_collapse} justify-content-between`}
           id="navbarCollapse"
@@ -73,18 +66,37 @@ function Navbar() {
           <div className={`${styles.navbar_nav} ml-auto p-4`}>
             <Link
               href="/"
-              className={`${styles.nav_link} ${styles.active_nav_link}`}
+              className={`${styles.nav_link} ${
+                isActive('/') ? styles.active_nav_link : ''
+              }`}
             >
               Home
             </Link>
 
-            <Link href="/about" className={`${styles.nav_link}`}>
+            <Link
+              href="/about"
+              className={`${styles.nav_link} ${
+                isActive('/about') ? styles.active_nav_link : ''
+              }`}
+            >
               About
             </Link>
-            <Link href="/services" className={`${styles.nav_link}`}>
+
+            <Link
+              href="/services"
+              className={`${styles.nav_link} ${
+                isActive('/services') ? styles.active_nav_link : ''
+              }`}
+            >
               Services
             </Link>
-            <Link href="/menu" className={`${styles.nav_link}`}>
+
+            <Link
+              href="/menu"
+              className={`${styles.nav_link} ${
+                isActive('/menu') ? styles.active_nav_link : ''
+              }`}
+            >
               Menu
             </Link>
 
@@ -96,20 +108,34 @@ function Navbar() {
               >
                 Pages
               </a>
-
               <div
                 className={`${styles.dropdown_menu} ${styles.text_capitalize}`}
               >
-                <Link href="/reservation" className={`${styles.dropdown_item}`}>
+                <Link
+                  href="/reservation"
+                  className={`${styles.dropdown_item} ${
+                    isActive('/reservation') ? styles.active_nav_link : ''
+                  }`}
+                >
                   Reservation
                 </Link>
-                <Link href="/testimonial" className={`${styles.dropdown_item}`}>
+                <Link
+                  href="/testimonial"
+                  className={`${styles.dropdown_item} ${
+                    isActive('/testimonial') ? styles.active_nav_link : ''
+                  }`}
+                >
                   Testimonial
                 </Link>
               </div>
             </div>
 
-            <Link href="/contact" className={`${styles.nav_link}`}>
+            <Link
+              href="/contact"
+              className={`${styles.nav_link} ${
+                isActive('/contact') ? styles.active_nav_link : ''
+              }`}
+            >
               Contact
             </Link>
           </div>
