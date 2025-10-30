@@ -1,9 +1,7 @@
 import styles from '@/styles/Product.module.css';
 
-// Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
 
@@ -13,7 +11,12 @@ const Comments = ({ data }) => {
   if (!data || data.length === 0) {
     return (
       <div
-        style={((fontSize = '20px'), (color = 'gray'), (textAlign = 'center'))}
+        style={{
+          fontSize: '20px',
+          color: 'gray',
+          textAlign: 'center',
+          padding: '40px 0',
+        }}
       >
         No comments for this product
       </div>
