@@ -29,12 +29,22 @@ export async function getStaticPaths(context) {
 export async function getStaticProps(context) {
   const { params } = context;
 
-  const res = await fetch(`http://localhost:4000/menu/${params.id}`);
-  const product = await res.json();
+  const productResponse = await fetch(
+    `http://localhost:4000/menu/${params.id}`
+  );
+  const product = await productResponse.json();
+
+  const commentsResponse = await fetch('http://localhost:4000/comments');
+  const comments = await commentsResponse.json();
+
+  const productComments = comments.fillter(
+    (comments) => comments.productId === params.id
+  );
 
   return {
     props: {
-      product,
+      product: productResponse,
+      comments: commentsResponse,
     },
   };
 }
