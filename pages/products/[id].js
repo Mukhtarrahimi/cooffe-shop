@@ -3,11 +3,11 @@ import '@/styles/Product.module.css';
 import Comments from '@/components/templates/Product/Comments';
 import ProductsDetails from '@/components/templates/Product/ProductDetails';
 
-const Product = ({ product }) => {
+const Product = ({ product, comments }) => {
   return (
     <>
       <ProductsDetails data={product} />
-      <Comments />
+      <Comments data={comments} />
     </>
   );
 };
@@ -32,20 +32,21 @@ export async function getStaticProps(context) {
   const productResponse = await fetch(
     `http://localhost:4000/menu/${params.id}`
   );
-  const product = await productResponse.json();
+  const productData = await productResponse.json();
 
-  const commentsResponse = await fetch('http://localhost:4000/comments');
+  const commentsResponse = await fetch(`http://localhost:4000/comments`);
   const comments = await commentsResponse.json();
 
-  const productComments = comments.fillter(
-    (comments) => comments.productId === params.id
+  const productComments = comments.filter(
+    (comment) => comment.productID === +params.id
   );
 
   return {
     props: {
-      product: productResponse,
-      comments: commentsResponse,
+      product: productData,
+      comments: productComments,
     },
+    revalidate: 60 * 60 * 12, // Second
   };
 }
 
