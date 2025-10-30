@@ -7,10 +7,19 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
-// import required modules
 import { Pagination } from 'swiper/modules';
 
 const Comments = ({ data }) => {
+  if (!data || data.length === 0) {
+    return (
+      <div
+        style={((fontSize = '20px'), (color = 'gray'), (textAlign = 'center'))}
+      >
+        No comments for this product
+      </div>
+    );
+  }
+
   return (
     <div className="container-fluid pt-5">
       <div className="container">
@@ -48,7 +57,7 @@ const Comments = ({ data }) => {
                       className="img-fluid"
                       width={100}
                       src={comment.profile}
-                      alt=""
+                      alt={comment.username}
                     />
                     <div className="ml-3">
                       <h4>{comment.username}</h4>
